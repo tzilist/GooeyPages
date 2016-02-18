@@ -1,0 +1,26 @@
+{
+  "name": "frontendgui",
+  "version": "0.1.0",
+  "description": "Server generator that builds front end webpages",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzilist/frontendgui.git"
+  },
+  "author": "Curtis Jah, Rob Rosario, Ted Zilist",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tzilist/frontendgui/issues"
+  },
+  "homepage": "https://github.com/tzilist/frontendgui#readme",
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
