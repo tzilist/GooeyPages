@@ -13,7 +13,7 @@ Bundler.bundle = function(req,res, next) {
     serverText =  "const express = require('express'); \nconst fs = require('fs');\nconst path = require('path'); \nconst app = express(); \n\n"
 
     for(let i in files) {
-      serverText += `app.get('/${files[i].replace()}')`
+      serverText += `app.get('/${files[i].replace('test','')}')`
     }
 
     fs.writeFile(path.join(__dirname, '../templates/server.js'), serverText, (err) => {
