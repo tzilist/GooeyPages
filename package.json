@@ -21,6 +21,7 @@
     "nodemon": "^1.8.1"
   },
   "dependencies": {
+    "browser-sync": "^2.11.1",
     "express": "^4.13.4"
   }
 }
