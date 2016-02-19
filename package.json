@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/tzilist/frontendgui#readme",
   "devDependencies": {
-    "nodemon": "^1.8.1"
+    "express-zip": "^2.0.0",
+    "nodemon": "^1.8.1",
+    "serve-static": "^1.10.2"
   },
   "dependencies": {
     "browser-sync": "^2.11.1",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "zip-stream": "^0.8.0"
   }
 }
