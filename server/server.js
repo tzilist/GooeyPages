@@ -1,9 +1,16 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const bundler = require('../bundler/bundler.js')
+const app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+
+app.use('/download',  bundler.bundle);
+app.get('/download', (req, res) => {
 });
 
-app.listen(3000, function () {
+
+
+
+app.listen(3000, () => {
 });
