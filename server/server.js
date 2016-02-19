@@ -6,7 +6,11 @@ const EasyZip = require('easy-zip').EasyZip;
 const app = express();
 
 
-app.use(express.static('/client'));
+app.use('/build', express.static('client'));
+
+app.get('/build', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/index.html'));
+});
 
 app.use('/download', bundler.bundle);
 app.get('/download', (req, res) => {
