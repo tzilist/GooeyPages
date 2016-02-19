@@ -19,7 +19,6 @@ Bundler.bundle = function(req,res, next) {
     //write actual file
     fs.writeFile(path.join(__dirname, '../templates/server/server.js'), serverText, (err) => {
       if (err) throw err;
-      console.log('done');
     });
 
     next();

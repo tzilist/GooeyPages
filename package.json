@@ -1,10 +1,10 @@
 {
-  "name": "frontendgui",
+  "name": "GooeyPages",
   "version": "0.1.0",
   "description": "Server generator that builds front end webpages",
   "main": "server/server.js",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,11 +20,10 @@
   "devDependencies": {
     "express-zip": "^2.0.0",
     "nodemon": "^1.8.1",
-    "serve-static": "^1.10.2"
+    "express": "^4.13.4"
   },
   "dependencies": {
     "browser-sync": "^2.11.1",
-    "express": "^4.13.4",
-    "zip-stream": "^0.8.0"
+    "easy-zip": "0.0.4"
   }
 }
