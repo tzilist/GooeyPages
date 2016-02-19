@@ -22,6 +22,7 @@ var zipLogs = function(working_directory) {
       if (err)
           throw err;
 
+
   console.log('done:', base, bytes);
   });
 }

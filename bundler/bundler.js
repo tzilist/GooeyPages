@@ -11,6 +11,7 @@ Bundler.bundle = function(req,res, next) {
 
     //create server.js file with routes to each html page
     serverText =  "const express = require('express'); \nconst fs = require('fs');\nconst path = require('path'); \nconst app = express(); \n\n"
+
     //add file paths to html files
     for(var i in files) {
       serverText += `app.get('/${files[i].replace(/(.html)$/g,'')}', (req, res) => {\n\tres.sendFile(path.join(__dirname,'./../html/${files[i]}'))\n})\n\n`
