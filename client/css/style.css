@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+}
+
+body > p, h1.apphead {
+  transition: all 0.3s;
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+  padding: 10px;
+}
+body > p:not(h1), h1.apphead:not(h1) {
+  margin: 10px;
+}
+body > p:not(h1):not(:empty):not(.label), h1.apphead:not(h1):not(:empty):not(.label) {
+  background: #eee;
+}
+body > p:empty:not(h1), h1.apphead:empty:not(h1) {
+  color: #aaa;
+}
+body > p:empty:before, h1.apphead:empty:before {
+  content: attr(placeholder);
+}
+
+h1.apphead {
+  padding: 20px;
+  font-weight: 400;
+}
+h1.apphead:not(:empty) {
+  background: cornflowerblue;
+  color: #fff;
+}
+h1.apphead:empty {
+  color: #aaa;
+}
+
+.toolbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: none;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  padding: 5px;
+  border-top-right-radius: 20px;
+}
+
+.icon {
+  padding: 10px;
+  font-size: 1.5em;
+  transition: all 0.3s;
+}
+
+.green {
+  color: #7CC576;
+}
+
+.label {
+  margin-bottom: 1px;
+  padding-bottom: 1px;
+}
