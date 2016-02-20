@@ -14,7 +14,7 @@ Bundler.bundle = function(req,res, next) {
 
     //add file paths to html files
     for(var i in files) {
-      serverText += `app.get('/${files[i].replace(/(.html)$/g,'')}', (req, res) => {\n\tres.sendFile(path.join(__dirname,'./../html/${files[i]}'))\n})\n\n`
+      serverText += `app.get('/${files[i].replace(/(.html)$/g,'')}', (req, res) => {\n\tres.sendFile(path.join(__dirname,'./../client/${files[i]}'))\n})\n\n`
     }
     //write actual file
     fs.writeFile(path.join(__dirname, '../templates/server/server.js'), serverText, (err) => {
