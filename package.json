@@ -4,7 +4,7 @@
   "description": "Server generator that builds front end webpages",
   "main": "server/server.js",
   "scripts": {
-    "start": "nodemon --ignore *.zip --ignore userpages/* server/server.js",
+    "start": "nodemon --ignore userpages/ --ignore *.zip server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,11 +17,7 @@
     "url": "https://github.com/tzilist/frontendgui/issues"
   },
   "homepage": "https://github.com/tzilist/frontendgui#readme",
-  "devDependencies": {
-    "express-zip": "^2.0.0",
-    "nodemon": "^1.8.1",
-    "express": "^4.13.4"
-  },
+  "devDependencies": {},
   "dependencies": {
     "bcrypt": "^0.8.5",
     "bcryptjs": "^2.3.0",
@@ -30,6 +26,9 @@
     "cookie-parser": "^1.4.1",
     "easy-zip": "0.0.4",
     "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-zip": "^2.0.0",
+    "github": "^0.2.4",
     "mongoose": "^4.4.4",
     "nodemon": "^1.9.0"
   }
