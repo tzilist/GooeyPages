@@ -18,7 +18,13 @@ app.get('/', function(req, res) {
 
 });
 
-app.use(express.static('/client'));
+app.use('/build', express.static('client'));
+app.get('/build', (req, res) => {
+  res.sendFile(path.join(__dirname, './../client/build.html'));
+});
+
+
+
 
 app.use('/download', bundler.bundle);
 app.get('/download', (req, res) => {
@@ -42,7 +48,7 @@ app.get('/logout', function(req, res) {
 app.get('/secret', function(req, res) {
   userController.getAllUsers(function(err, users) {
   	if (err) throw err;
-    res.render('./../client/home');
+    res.redirect('/build');
   });
 });
 
