@@ -1,14 +1,8 @@
 const User = require('./userModel');
 const path = require('path');
 const bcrypt = require('bcrypt');
-
-
-
 const userController = {};
 
-userController.getAllUsers = function(next) {
-  User.find({}, next);
-};
 
 userController.createUser = function(req, res) {
   if (!req.body.username || !req.body.password) {
@@ -21,7 +15,7 @@ userController.createUser = function(req, res) {
 
   newUser.save(function(err, result) {
   	if (err) return res.render('./../client/signup', {error: 'Username invalid'});
-  	res.redirect('/secret');
+  	res.redirect('/build');
   });
 }
 
@@ -34,7 +28,7 @@ userController.verifyUser = function(req, res) {
 
   	result.comparePassword(req.body.password, function(err, pwCheck) {
   	  if (!pwCheck) return res.redirect('/signup');
-  	  res.redirect('/secret');
+  	  res.redirect('/build');
   	});
   });
 
