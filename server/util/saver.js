@@ -1,5 +1,11 @@
+const fs = require('fs');
+const path = require('path');
+
+
+
 module.exports = function Saver(req, res, next) {
-  var html = `<!DOCTYPE html>
+  const html =
+  `<!DOCTYPE html>
   <html>
     <head>
       <meta charset="utf-8">
@@ -8,7 +14,9 @@ module.exports = function Saver(req, res, next) {
     <body>
       ${req.body.inner}
     </body>
-  </html>`
+  </html>`;
 
-  console.log(html)
+  fs.writeFile(path.join(__dirname, `../../userpages/${req.cookies.ssid}/client/${req.body.name.replace(/(.html)/gm,"")}.html`), html, (err) => {
+    if (err) throw err;
+  });
 }

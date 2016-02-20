@@ -4,7 +4,7 @@
   "description": "Server generator that builds front end webpages",
   "main": "server/server.js",
   "scripts": {
-    "start": "nodemon --ignore *.zip server/server.js",
+    "start": "nodemon --ignore *.zip --ignore userpages/* server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +27,7 @@
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.0",
     "browser-sync": "^2.11.1",
+    "cookie-parser": "^1.4.1",
     "easy-zip": "0.0.4",
     "ejs": "^2.4.1",
     "mongoose": "^4.4.4",
